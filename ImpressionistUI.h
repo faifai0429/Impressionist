@@ -70,8 +70,21 @@ private:
 	static void	cb_save_image(Fl_Menu_* o, void* v);
 	static void	cb_brushes(Fl_Menu_* o, void* v);
 	static void	cb_clear_canvas(Fl_Menu_* o, void* v);
-	static void	cb_exit(Fl_Menu_* o, void* v);
+	static void	cb_colors(Fl_Menu_* o, void* v);
+	static void	cb_paintly(Fl_Menu_* o, void* v);
+	static void	cb_load_edge_image(Fl_Menu_* o, void* v);
+	static void	cb_load_another_image(Fl_Menu_* o, void* v);
+	static void	cb_quit(Fl_Menu_* o, void* v);
+
+	static void	cb_original_image(Fl_Menu_* o, void* v);
+	static void	cb_edge_image(Fl_Menu_* o, void* v);
+	static void	cb_another_image(Fl_Menu_* o, void* v);
+
+	static void	cb_faster(Fl_Menu_* o, void* v);
+	static void	cb_safer(Fl_Menu_* o, void* v);
+
 	static void	cb_about(Fl_Menu_* o, void* v);
+
 	static void	cb_brushChoice(Fl_Widget* o, void* v);
 	static void	cb_clear_canvas_button(Fl_Widget* o, void* v);
 	static void	cb_sizeSlides(Fl_Widget* o, void* v);

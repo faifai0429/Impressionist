@@ -219,24 +219,68 @@ void ImpressionistUI::cb_clear_canvas(Fl_Menu_* o, void* v)
 	pDoc->clearCanvas();
 }
 
+void ImpressionistUI::cb_colors(Fl_Menu_* o, void* v)
+{
+
+}
+
+void ImpressionistUI::cb_paintly(Fl_Menu_* o, void* v)
+{
+
+}
+
+void ImpressionistUI::cb_load_edge_image(Fl_Menu_* o, void* v)
+{
+
+}
+
+void ImpressionistUI::cb_load_another_image(Fl_Menu_* o, void* v)
+{
+
+}
+
+
 //------------------------------------------------------------
 // Causes the Impressionist program to exit
 // Called by the UI when the quit menu item is chosen
 //------------------------------------------------------------
-void ImpressionistUI::cb_exit(Fl_Menu_* o, void* v) 
+void ImpressionistUI::cb_quit(Fl_Menu_* o, void* v) 
 {
 	whoami(o)->m_mainWindow->hide();
 	whoami(o)->m_brushDialog->hide();
 
 }
 
+void ImpressionistUI::cb_original_image(Fl_Menu_* o, void* v)
+{
 
+}
+
+void ImpressionistUI::cb_edge_image(Fl_Menu_* o, void* v)
+{
+
+}
+
+void ImpressionistUI::cb_another_image(Fl_Menu_* o, void* v)
+{
+
+}
+
+void ImpressionistUI::cb_faster(Fl_Menu_* o, void* v)
+{
+
+}
+
+void ImpressionistUI::cb_safer(Fl_Menu_* o, void* v)
+{
+
+}
 
 //-----------------------------------------------------------
 // Brings up an about dialog box
 // Called by the UI when the about menu item is chosen
 //-----------------------------------------------------------
-void ImpressionistUI::cb_about(Fl_Menu_* o, void* v) 
+void ImpressionistUI::cb_about(Fl_Menu_* o, void* v)
 {
 	fl_message("Impressionist FLTK version for CS341, Spring 2002");
 }
@@ -347,7 +391,18 @@ Fl_Menu_Item ImpressionistUI::menuitems[] = {
 		{ "&Brushes...",	FL_ALT + 'b', (Fl_Callback *)ImpressionistUI::cb_brushes }, 
 		{ "&Clear Canvas", FL_ALT + 'c', (Fl_Callback *)ImpressionistUI::cb_clear_canvas, 0, FL_MENU_DIVIDER },
 		
-		{ "&Quit",			FL_ALT + 'q', (Fl_Callback *)ImpressionistUI::cb_exit },
+		{ "&Quit",			FL_ALT + 'q', (Fl_Callback *)ImpressionistUI::cb_quit },
+		{ 0 },
+
+	{ "&Display",	0, 0, 0, FL_SUBMENU},
+		{ "&Original Image", FL_ALT + 'o', (Fl_Callback *)ImpressionistUI::cb_original_image },
+		{ "&Edge Image", FL_ALT + 'o', (Fl_Callback *)ImpressionistUI::cb_edge_image },
+		{ "&Another Image", FL_ALT + 'o', (Fl_Callback *)ImpressionistUI::cb_another_image },
+		{ 0 },
+
+	{ "&Options",	0, 0, 0, FL_SUBMENU },
+		{ "&Faster", FL_ALT + 'f', (Fl_Callback *)ImpressionistUI::cb_faster },
+		{ "&Safer", FL_ALT + 's', (Fl_Callback *)ImpressionistUI::cb_safer },
 		{ 0 },
 
 	{ "&Help",		0, 0, 0, FL_SUBMENU },
