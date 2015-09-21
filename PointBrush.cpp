@@ -45,15 +45,17 @@ void PointBrush::BrushMove( const Point source, const Point target )
 		return;
 	}
 
-	glPointSize(0.1f);
+	
+	int counter = strcmp(BrushName(), "Scattered Points") != 0 ? 1 : (float)dlg->getSize();
+	if (counter != 1) {
+		glPointSize(0.1f);
+	}	
 
 	glBegin( GL_POINTS );
 
 	float radius = ((float)dlg->getSize() / 2);
 	Point point = { target.x, target.y };
-	
-	int counter = strcmp(BrushName(), "Scattered Points") != 0 ? 1 : (float)dlg->getSize();
-	
+
 	for (int i = 0; i < counter; i++) {
 		SetColor(point);
 		glVertex2d(point.x, point.y);
